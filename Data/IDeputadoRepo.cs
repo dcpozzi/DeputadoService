@@ -1,10 +1,8 @@
-using DeputadorService.Models;
+using DeputadoService.Models;
 
-namespace DeputadorService.Data;
+namespace DeputadoService.Data;
 
 public interface IDeputadoRepo
 {
-    IEnumerable<Deputado> GetAllDeputados();
-
-    Deputado GetDeputadoById(int id);
+    IEnumerable<DeputadoEstatisticas> GetAllDeputadosEstatisticas();
 }

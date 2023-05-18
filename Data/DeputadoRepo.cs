@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using DeputadorService.Models;
+using DeputadoService.Models;
 
-namespace DeputadorService.Data;
+namespace DeputadoService.Data;
 
 public class DeputadoRepo : IDeputadoRepo
 {
@@ -12,13 +12,8 @@ public class DeputadoRepo : IDeputadoRepo
         _context = context;
     }
 
-    public IEnumerable<Deputado> GetAllDeputados()
+    public IEnumerable<DeputadoEstatisticas> GetAllDeputadosEstatisticas()
     {
-        return _context.Deputados.Where<Deputado>(d => d.IdDeputadoAPI != null).Include(d => d.GastosAgregados).ToList();
-    }
-
-    public Deputado GetDeputadoById(int id)
-    {
-        return _context.Deputados.FirstOrDefault(d => d.Id == id)!;
+        return _context.DeputadosEstatisticas.ToList();
     }
 }

@@ -1,14 +1,14 @@
 using AutoMapper;
-using DeputadorService.Dtos;
-using DeputadorService.Models;
+using DeputadoService.Dtos;
+using DeputadoService.Models;
 
-namespace DeputadorService.Profiles;
+namespace DeputadoService.Profiles;
 
 public class DeputadosProfile : Profile
 {
     public DeputadosProfile()
     {
         //source -> target
-        CreateMap<Deputado, DeputadoReadDto>().ForMember(d => d.TotalDespesas, opt => opt.MapFrom(m => m.GastosAgregados.TotalDocumentos));
+        CreateMap<DeputadoEstatisticas, DeputadoReadDto>();
     }
 }

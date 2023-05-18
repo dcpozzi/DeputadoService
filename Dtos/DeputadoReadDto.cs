@@ -1,10 +1,8 @@
-namespace DeputadorService.Dtos;
+namespace DeputadoService.Dtos;
 
 public class DeputadoReadDto
 {
-    public int Id { get; set; }
-    public int IdDeputadoAPI { get; set; }
-    public int IdDeputadoArq { get; set; }
-    public string Nome { get; set; } = string.Empty;
-    public double TotalDespesas { get; set; } = 0;
+    public int IdDeputado { get; set; }
+    public double TotalDocumentos { get; set; } = 0;
+    public double TotalProposicoes { get; set; } = 0;
 }

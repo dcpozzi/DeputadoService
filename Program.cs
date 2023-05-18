@@ -1,4 +1,4 @@
-using DeputadorService.Data;
+using DeputadoService.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

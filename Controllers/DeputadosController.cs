@@ -1,9 +1,9 @@
 using AutoMapper;
-using DeputadorService.Data;
-using DeputadorService.Dtos;
+using DeputadoService.Data;
+using DeputadoService.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DeputadorService.Controllers;
+namespace DeputadoService.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -19,9 +19,9 @@ public class DeputadosController : ControllerBase
     }
 
     [HttpGet]
-    public ActionResult<IEnumerable<DeputadoReadDto>> GetDeputados()
+    public ActionResult<IEnumerable<DeputadoReadDto>> GetDeputadosEstatisticas()
     {
-        var deputadosItem = _repo.GetAllDeputados();
+        var deputadosItem = _repo.GetAllDeputadosEstatisticas();
         return Ok(_mapper.Map<IEnumerable<DeputadoReadDto>>(deputadosItem));
     }
 }
