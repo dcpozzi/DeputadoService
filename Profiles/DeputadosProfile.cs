@@ -9,6 +9,7 @@ public class DeputadosProfile : Profile
     public DeputadosProfile()
     {
         //source -> target
-        CreateMap<DeputadoEstatisticas, DeputadoReadDto>();
+        CreateMap<DeputadoEstatisticas, DeputadoEstatisticasReadDto>();
+        CreateMap<Proposicao, ProposicaoReadDto>();
     }
 }

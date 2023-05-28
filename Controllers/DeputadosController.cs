@@ -19,9 +19,10 @@ public class DeputadosController : ControllerBase
     }
 
     [HttpGet]
-    public ActionResult<IEnumerable<DeputadoReadDto>> GetDeputadosEstatisticas()
+    [Route("statistics")]
+    public ActionResult<IEnumerable<DeputadoEstatisticasReadDto>> GetDeputadosEstatisticas()
     {
         var deputadosItem = _repo.GetAllDeputadosEstatisticas();
-        return Ok(_mapper.Map<IEnumerable<DeputadoReadDto>>(deputadosItem));
+        return Ok(_mapper.Map<IEnumerable<DeputadoEstatisticasReadDto>>(deputadosItem));
     }
 }

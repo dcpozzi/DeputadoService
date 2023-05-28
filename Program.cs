@@ -7,6 +7,7 @@ string connectionString = builder.Configuration.GetConnectionString("CongressDBC
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString).UseSnakeCaseNamingConvention());
 
 builder.Services.AddScoped<IDeputadoRepo, DeputadoRepo>();
+builder.Services.AddScoped<IProposicaoRepo, ProposicaoRepo>();
 
 builder.Services.AddControllers();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
